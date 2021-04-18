@@ -1,0 +1,12 @@
+{
+    "name": "gdarquie/ficore",
+    "authors": [
+        {
+            "name": "gdarquie",
+            "email": "gaetan.darquie@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
