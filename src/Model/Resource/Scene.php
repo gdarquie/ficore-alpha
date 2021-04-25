@@ -5,6 +5,7 @@ namespace Ficore\Model\Resource;
 
 
 use App\Entity\Story;
+use Ficore\Action\ActionInterface;
 use Ficore\Model\Action\Action;
 
 class Scene extends Resource
@@ -13,7 +14,7 @@ class Scene extends Resource
     private Story $story;
 
     /**
-     * @var Action[]
+     * @var ActionInterface[]
      */
     private array $actions;
 
@@ -44,14 +45,14 @@ class Scene extends Resource
     }
 
     /**
-     * @return Action[]
+     * @return ActionInterface[]
      */
     public function getActions(): array
     {
         return $this->actions;
     }
 
-    public function addActions(Action $action): array
+    public function addActions(ActionInterface $action): void
     {
         $this->actions[] = $action;
     }
