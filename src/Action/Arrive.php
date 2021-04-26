@@ -14,11 +14,13 @@ class Arrive implements ActionInterface
     private string $actionType = self::ARRIVE_ACTION_TYPE;
     private Character $source;
     private Place $place;
+    private string $output;
 
     public function __construct(Character $source, Place $place)
     {
         $this->source = $source;
         $this->place = $place;
+        $this->output = $this->computeOutput($source, $place);
     }
 
     public function getActionType(): string
@@ -31,18 +33,18 @@ class Arrive implements ActionInterface
         return $this->source;
     }
 
-    public function setSource(Character $source): void
-    {
-        $this->source = $source;
-    }
-
     public function getPlace(): Place
     {
         return $this->place;
     }
 
-    public function setPlace(Place $place): void
+    public function getOutput(): string
     {
-        $this->place = $place;
+        return $this->output;
+    }
+
+    private function computeOutput(Character $source, Place $place)
+    {
+        return $source->getFullname() . " arrive à " . $place->getTitle();
     }
 }
