@@ -4,7 +4,7 @@
 namespace Ficore\Action;
 
 
-use Ficore\Model\Resource\Character;
+use Ficore\Model\Resource\Character\Character;
 use Ficore\Model\Resource\Place;
 
 class Arrive implements ActionInterface

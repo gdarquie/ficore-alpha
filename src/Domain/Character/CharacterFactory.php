@@ -1,10 +1,8 @@
 <?php
 
-
 namespace Ficore\Domain\Character;
 
-
-use Ficore\Model\Resource\Character;
+use Ficore\Model\Resource\Character\Character;
 
 class CharacterFactory
 {

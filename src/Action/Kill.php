@@ -1,16 +1,14 @@
 <?php
 
-
 namespace Ficore\Action;
 
-
-use Ficore\Model\Resource\Character;
-use Ficore\Model\Resource\Place;
+use Ficore\Model\Resource\Character\Character;
 
 class Kill implements ActionInterface
 {
     CONST KILL_ACTION_TYPE = 'kill';
 
+    private string $actionType = self::KILL_ACTION_TYPE;
     private Character $source;
     private Character $target;
     private string $output;
@@ -20,6 +18,11 @@ class Kill implements ActionInterface
         $this->source = $source;
         $this->target = $target;
         $this->output = $this->computeOutput($source, $target);
+    }
+
+    public function getActionType(): string
+    {
+        return $this->actionType;
     }
 
     public function getSource(): Character
