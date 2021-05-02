@@ -1,12 +1,9 @@
 <?php
 
-
 namespace Ficore\Model\Resource;
 
-
-use App\Entity\Story;
 use Ficore\Action\ActionInterface;
-use Ficore\Model\Action\Action;
+use Ficore\Model\Resource\Story\Story;
 
 class Scene extends Resource
 {

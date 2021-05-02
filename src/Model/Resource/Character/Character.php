@@ -5,7 +5,7 @@ namespace Ficore\Model\Resource\Character;
 use Ficore\Model\Resource\Resource;
 use Symfony\Component\Uid\Uuid;
 
-class Character extends Resource implements CharacterInterface
+class Character extends Resource
 {
     protected string $fullname;
     protected string $uuid;

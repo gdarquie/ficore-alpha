@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ficore\Model;
+namespace Ficore\Model\Fiction;
 
 
 class Fiction
